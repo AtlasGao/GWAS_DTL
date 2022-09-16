@@ -2,18 +2,17 @@
 
 # Overview
 
-This is the software script for implementing the ROI method published in XXX, as well as reproducing the results described in the manuscript. This software contains four major components:
+This is the software script for implementing the DTL method published in XXX, as well as reproducing the results described in the manuscript. This software contains four major components:
 
-- The data preprocessing interface for TCGA dataset.
-- The performance of time to event prediction from four different models: CPH, CPH\_ROI, CPH\_DL, and CPH\_DL\_ROI.
-- The evaluation of performance of four modes using a CVD dataset collected by the national health heart study.
+- The data preprocessing interface for the synthetic datasets.
+- The performance of GWAS prediction for Lung and Prostate Cancer. 
 - Use a synthetic dataset to study the performance of four different models.
 
 # Software Structure
 
 The examples folder contains the scripts for reproducing the result in Fig 1.
 
-The data folder contains the script file to ensemble dataset from TCGA cohort.
+The data folder contains the file to download the synthetic datasets from Figshare.
 
 The model folder contains the files for deep Cox neural network (CPH\_DL), Cox regression with ROI (CPH\_ROI), and Cox regression with deep learning and ROI (CPH\_DL\_ROI).
 
