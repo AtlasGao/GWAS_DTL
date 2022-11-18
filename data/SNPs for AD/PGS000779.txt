@@ -1,0 +1,22 @@
+###PGS CATALOG SCORING FILE - see https://https://www.pgscatalog.org/downloads/#dl_ftp_scoring for additional information
+#format_version=2.0
+##POLYGENIC SCORE (PGS) INFORMATION
+#pgs_id=PGS000779
+#pgs_name=PGS7_AD
+#trait_reported=Alzheimer's disease
+#trait_mapped=Alzheimer disease
+#trait_efo=MONDO_0004975
+#weight_type=beta
+#genome_build=NR
+#variants_number=7
+##SOURCE INFORMATION
+#pgp_id=PGP000183
+#citation=Zhou X et al. Alzheimers Dement (Amst) (2020). doi:10.1002/dad2.12074
+rsID	effect_allele	other_allele	effect_weight	locus_name
+rs429358	C	T	0.982	APOE
+rs11556505	T	C	1.001	TOMM40
+rs519113	G	C	0.685	NECTIN2
+rs11218343	C	T	-0.401	SORL1
+rs4147929	A	G	-0.314	ABCA7
+rs7412	T	C	-0.619	APOE
+rs6014724	G	A	-0.311	CASS4

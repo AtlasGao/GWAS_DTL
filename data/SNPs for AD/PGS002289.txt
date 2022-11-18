@@ -1,0 +1,38 @@
+###PGS CATALOG SCORING FILE - see https://www.pgscatalog.org/downloads/#dl_ftp_scoring for additional information
+#format_version=2.0
+##POLYGENIC SCORE (PGS) INFORMATION
+#pgs_id=PGS002289
+#pgs_name=GRS23_AD
+#trait_reported=Late onset Alzheimers disease
+#trait_mapped=late-onset Alzheimers disease
+#trait_efo=EFO_1001870
+#genome_build=NR
+#variants_number=23
+#weight_type=NR
+##SOURCE INFORMATION
+#pgp_id=PGP000316
+#citation=Zimmerman SC et al. JAMA Netw Open (2022). doi:10.1001/jamanetworkopen.2022.5491
+rsID	chr_name	effect_allele	effect_weight	locus_name
+rs6656401	1	A	0.1567	CR1
+rs35349669	2	T	0.0663	INPP5D
+rs6733839	2	T	0.188	BIN1
+rs190982	5	G	-0.0799	MEF2C
+rs10948363	6	G	0.0978	CD2AP
+rs11771145	7	A	-0.1024	EPHA1
+rs1476679	7	C	-0.0783	ZCWPW1
+rs2718058	7	G	-0.0697	NME8
+rs28834970	8	C	0.0959	PTK2B
+rs9331896	8	C	-0.1457	CLU
+rs10792832	11	A	-0.1297	PICALM
+rs10838725	11	C	0.0753	CELF1
+rs11218343	11	C	-0.2697	SORL1
+rs670139	11	T	0.0803	MS4A4E
+rs983392	11	G	-0.1084	MS4A6A
+rs10498633	14	T	-0.1044	SLC24A4-RIN3
+rs17125944	14	C	0.1223	FERMT2
+rs8093731	18	T	-0.6136	DSG2
+rs3865444	19	A	-0.0954	CD33
+rs4147929	19	A	0.1348	ABCA7
+rs429358	19	C	1.3503	APOE
+rs7412	19	T	-0.3871	APOE
+rs7274581	20	C	-0.139	CASS4
