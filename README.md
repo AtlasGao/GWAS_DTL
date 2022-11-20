@@ -118,6 +118,10 @@ python Lung\_cancer\_European\_EastAsian.py
 
 python Prostate\_cancer\_European\_AfricanAmerican.py
 
+python Lung\_European\_LatinAmerican.py
+
+python Alzheimer\_European\_AfricanAmerican.py
+
 The python scripts used to generate the data of Table 2 and Figure 4 in our paper can be found in the following folder
 
 cd / GWAS\_DTL / simulation1
