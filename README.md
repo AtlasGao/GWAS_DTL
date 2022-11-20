@@ -14,6 +14,7 @@ This software contains three major components:
 - simulation2: this directory contains the python scripts used to generate the plots in Fig S1 and Table S2.
 
 | **Entity** | **Path/location** | **Note** |
+| --- | --- | --- |
 | Data | ./data/instructions.txt | The path of the synthetic datasets |
 | Features | ./data/Features.xlsx | The features used for each study |
 | Model generator | ./\*.py/build\_model | The interface used to build a deep learning model |
@@ -33,6 +34,7 @@ The system relies on the following software, reagent, or resources.
 Our software has been tested on the following software version.
 
 | **Software and Hardware** | **SOURCE** | **IDENTIFIER** |
+| --- | --- | --- |
 | REAGENT or RESOURCE | SOURCE | IDENTIFIER |
 | Python 3.7 | Python Software Foundation | [https://www.python.org/download/releases/2.7/](https://www.python.org/download/releases/2.7/) |
 | Computational Facility | The National Institute for Computational Sciences | [https://www.nics.tennessee.edu/computing-resources/acf](https://www.nics.tennessee.edu/computing-resources/acf) |
