@@ -18,10 +18,10 @@ This software contains three major components:
 | Data | ./data/instructions.txt | The path of the synthetic datasets |
 | Features | ./data/Features.xlsx | The features used for each study |
 | Model generator | ./\*.py/build\_model | The interface used to build a deep learning model |
-| Mixture | ./diseases/\*.py/mixture\_learning | The mixture learning scheme for each study. |
-| Independent | ./diseases/\*.py/independent\_learning | The independent learning scheme for each study |
-| Naïve Transfer | ./diseases/\*.py/naive\_transfer | The Naïve transfer learning scheme for each study |
-| Transfer | ./diseases/\*.py/super\_transfer | The transfer learning scheme for each study |
+| Mixture | ./examples/\*.py/mixture\_learning | The mixture learning scheme for each study. |
+| Independent | ./examples/\*.py/independent\_learning | The independent learning scheme for each study |
+| Naïve Transfer | ./examples/\*.py/naive\_transfer | The Naïve transfer learning scheme for each study |
+| Transfer | ./examples/\*.py/super\_transfer | The transfer learning scheme for each study |
 
 # System Requirements
 
