@@ -1,48 +1,34 @@
-# **Software Description**
+# Software Description
 
 # Overview
 
-This is the software script for implementing the DTL method published in XXX, as well as reproducing the results described in the manuscript. This software contains four major components:
-
-- The data preprocessing interface for the synthetic datasets.
-- The performance of GWAS prediction for Lung and Prostate Cancer. 
-- Use a synthetic dataset to study the performance of four different models.
+This is the software script and data of our deep transfer learning method for GWAS (Genome wide Association Study) published on XXX, as well as reproducing the results described in the manuscript.
 
 # Software Structure
 
-The examples folder contains the scripts for reproducing the result in Fig 1.
+This software contains three major components:
 
-The data folder contains the file to download the synthetic datasets from Figshare.
-
-The model folder contains the files for deep Cox neural network (CPH\_DL), Cox regression with ROI (CPH\_ROI), and Cox regression with deep learning and ROI (CPH\_DL\_ROI).
-
-The simulation folder contains two synthetic datasets simulated from a uniform distribution, a data sampler, and two files, for reproducing the results in Table 3.
+- data: it contains the instructions for downloading the 14 synthetic datasets used in our experiments, as well as the SNPs and clinical variables used in each disease study.
+- examples: this directory contains the scripts to generate the data shown in the four plots of Fig 2 and Table 1.
+- simulation1: this directory contains the scripts used for 8 synthetic datasets, to generate the plots shown in Fig 4 and Table 2.
+- simulation2: this directory contains the python scripts used to generate the plots in Fig S1 and Table S2.
 
 | **Entity** | **Path/location** | **Note** |
 | --- | --- | --- |
-| Cox | ./model/cox\_model.py | The Cox regression model |
-| FeatureExtractor | ./model/cox\_model.py | The Feature extractor for deep learning models |
-| CPH\_ROI | ./model/cox\_model.py | The CPH\_ROI model as described in the method section of our manuscript. |
-| CPH\_DL | ./model/cox\_model.py | The CPH\_DL model as described in the method section of our manuscript. |
-| CPH\_DL\_ROI | ./model/cox\_model.py | The CPH\_DL\_ROI model as described in the method section of our manuscript. |
-| Synthetic datasets 1, 2 | ./simulation/main.csv./simulation/related.csv | The synthetic datasets for simulation study. |
-| SimulatedData | ./simulation/simulate\_data.py | The class for synthetic data generation. |
-| summary | ./results/summary.py | To summarize the result of each experiment. |
+| Data | ./data/instructions.txt | The path of the synthetic datasets |
+| --- | --- | --- |
+| Features | ./data/Features.xlsx | The features used for each study |
+| Model generator | ./\*.py/build\_model | The interface used to build a deep learning model |
+| Mixture | ./diseases/\*.py/mixture\_learning | The mixture learning scheme for each study. |
+| Independent | ./diseases/\*.py/independent\_learning | The independent learning scheme for each study |
+| Naïve Transfer | ./diseases/\*.py/naive\_transfer | The Naïve transfer learning scheme for each study |
+| Transfer | ./diseases/\*.py/super\_transfer | The transfer learning scheme for each study |
 
 # System Requirements
 
 ## Software dependency
 
 The system relies on the following software, reagent, or resources.
-
-| **REAGENT or RESOURCE** | **SOURCE** | **IDENTIFIER** |
-| --- | --- | --- |
-| TCGA | Genomic Data Commons data portal | [https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/) |
-| TCGA Cancer Types | Broad Institute | [https://gdac.broadinstitute.org/](https://gdac.broadinstitute.org/) |
-| American Cancer Types | Cancer Treatment Centers of America | [https://www.cancercenter.com/cancer-types](https://www.cancercenter.com/cancer-types) |
-| TCGA Protein | Genomic Data Commons data portal | [https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/) |
-| TCGA Clinical | Genomic Data Commons data portal | [https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/) |
-| TCGA Clinical Endpoints | TCGA Pan-Cancer Clinical Data Resource | [https://www.sciencedirect.com/science/article/pii/S0092867418302290](https://www.sciencedirect.com/science/article/pii/S0092867418302290) |
 
 ## Software version
 
@@ -51,15 +37,13 @@ Our software has been tested on the following software version.
 | **Software and Hardware** | **SOURCE** | **IDENTIFIER** |
 | --- | --- | --- |
 | REAGENT or RESOURCE | SOURCE | IDENTIFIER |
-| torch 1.7.1 | PyTorch Enterprise | https://pytorch.org/ |
+| --- | --- | --- |
 | Python 3.7 | Python Software Foundation | [https://www.python.org/download/releases/2.7/](https://www.python.org/download/releases/2.7/) |
 | Computational Facility | The National Institute for Computational Sciences | [https://www.nics.tennessee.edu/computing-resources/acf](https://www.nics.tennessee.edu/computing-resources/acf) |
-| Numpy 1.15.4 | Tidelift, Inc | https://libraries.io/pypi/numpy/1.15.4 |
+| Numpy 1.15.4 | Tidelift, Inc | [https://libraries.io/pypi/numpy/1.15.4](https://libraries.io/pypi/numpy/1.15.4) |
 | Numpydoc 0.9.1 | Tidelift, Inc | [https://libraries.io/pypi/numpydoc](https://libraries.io/pypi/numpydoc) |
 | Scipy 1.2.1 | The SciPy community | [https://docs.scipy.org/doc/scipy-1.2.1/reference/](https://docs.scipy.org/doc/scipy-1.2.1/reference/) |
-| Seaborn 0.9.0 | Michael Waskom | [https://seaborn.pydata.org/installing.html](https://seaborn.pydata.org/installing.html) |
 | Sklearn 0.0 | The Python community | [https://pypi.org/project/sklearn/](https://pypi.org/project/sklearn/) |
-| Skrebate 0.6 | Tidelift, Inc | [https://libraries.io/pypi/skrebate](https://libraries.io/pypi/skrebate) |
 | Keras 2.2.4 | GitHub, Inc. | [https://github.com/keras-team/keras/releases/tag/2.2.4](https://github.com/keras-team/keras/releases/tag/2.2.4) |
 | Keras-Applications 1.0.8 | GitHub, Inc. | [https://github.com/keras-team/keras-applications](https://github.com/keras-team/keras-applications) |
 | Keras-Preprocessing 1.1.0 | GitHub, Inc. | [https://github.com/keras-team/keras-preprocessing/releases/tag/1.1.0](https://github.com/keras-team/keras-preprocessing/releases/tag/1.1.0) |
@@ -67,7 +51,6 @@ Our software has been tested on the following software version.
 | Tensorflow 1.13.1 | tensorflow.org | [https://www.tensorflow.org/install/pip](https://www.tensorflow.org/install/pip) |
 | Tensorflow-estimator 1.13.1 | The Python community | [https://pypi.org/project/tensorflow-estimator/](https://pypi.org/project/tensorflow-estimator/) |
 | Statsmodels 0.9.0 | Statsmodels.org | [https://www.statsmodels.org/stable/release/version0.9.html](https://www.statsmodels.org/stable/release/version0.9.html) |
-| Lifelines 0.16.3 | Cam Davidson-Pilon Revision | [https://lifelines.readthedocs.io/en/latest/Changelog.html](https://lifelines.readthedocs.io/en/latest/Changelog.html) |
 | Xlrd 1.2.0 | The Python community | [https://pypi.org/project/xlrd/](https://pypi.org/project/xlrd/) |
 | XlsxWriter 1.1.8 | The Python community | [https://pypi.org/project/XlsxWriter/](https://pypi.org/project/XlsxWriter/) |
 | Xlwings 0.15.8 | The Python community | [https://pypi.org/project/xlwings/](https://pypi.org/project/xlwings/) |
@@ -75,11 +58,11 @@ Our software has been tested on the following software version.
 
 ## Hardware requirements
 
-We recommend use a GPU (V100) to speed up the running process of our software.
+We recommend using a GPU (V100) to speed up the running process of our software.
 
 # Installation Guide
 
-Our software package can be downloaded from the following github page: [https://github.com/AtlasGao/ROI](https://github.com/AtlasGao/ROI). This package contains the source code and demo datasets to reproduce the results represented in our paper. Our software can run on Windows and Ubuntu, but we suggest using Linux system which is easier for environment configuration.
+Our software package can be downloaded from the following Github homepage: https://github.com/AtlasGao/GWAS\_DTL. This package contains the source code and instructions to reproduce the results represented in our paper. Our software would run on Windows and Ubuntu, but we suggest using Linux system which is easier for environment configuration.
 
 Conda –install requirements.txt
 
@@ -117,7 +100,7 @@ lifelines==0.16.3
 
 Optunity==1.1.1
 
-xlrd==1.2.0
+xlrd==1.2.0-
 
 XlsxWriter==1.1.8
 
@@ -127,35 +110,43 @@ xlwt==1.3.0
 
 # Demo
 
-## Instructions to run on data
+## Instructions to run each experiment
 
-The python scripts used to generate the Figure 3 in our paper can be found in the following folder
+The python scripts used to generate the Lung cancer and the Prostate cancer in our paper can be found in the following folder:
 
-cd /ROI/examples
+cd /GWAS\_DTL/diseases
 
-python tcga\_test.py
+python Lung\_cancer\_European\_EastAsian.py
 
-The python scripts used to generate the Table 4 in our paper can be found in the following folder
+python Prostate\_cancer\_European\_AfricanAmerican.py
 
-cd /ROI/simulation
+The python scripts used to generate the data of Table 2 and Figure 4 in our paper can be found in the following folder
 
-python run\_simulation.py
+cd / GWAS\_DTL / simulation1
+
+python \*.py
+
+The python scripts used to generate the data of Table S2 and Figure S1 in our paper can be found in the following folder
+
+cd / GWAS\_DTL / simulation2
+
+python \*.py
 
 After the execution, the result will be printed in the console.
 
 ## Expected output
 
-The output of each task will be a vector with 4 C-index values, show the time to event prediction performance from four different models: CPH, CPH\_ROI, CPH\_DL, CPH\_DL\_ROI.
+The output of each script will be a data frame with 7 columns and 20 rows. Each row represents a single run, and the 7 columns show the result of different machine learning schemes.
 
 # Instructions for Use
 
 ## How to run the software
 
-To run our software with different diseases, endpoints, or feature, you need to download our dataset from a shared location (probably 10 GB) and put it under the ROI/data/ folder. You can simply specify the task you want to run by passing the location of your interested dataset to the _read\_data_ function.
+To run our software with different diseases, you need to download our dataset from the FigureShare server and put it under the GWAS\_DTL/data/ folder. You can simply specify the task you want to run by redirecting to the location of the script of a specific task.
 
 ## Reproduction instructions
 
-The key point to reproduce the result in our paper is follow the configuration process strictly.
+The key point to reproduce the result in our paper is to follow the configuration process strictly.
 
 ## Authors
 
